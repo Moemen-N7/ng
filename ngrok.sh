@@ -39,7 +39,7 @@ then
 echo "OK"
 
 fi
- fi
+
 
 echo -e $red "███╗   ██╗ ██████╗ ██████╗  ██████╗ ██╗  ██╗";
 echo -e $grn "████╗  ██║██╔════╝ ██╔══██╗██╔═══██╗██║ ██╔╝";
@@ -56,3 +56,4 @@ read -p "but your token" token
 /data/data/com.termux/files/usr/bin/ngrok authtoken $token
 
 /data/data/com.termux/files/usr/bin/ngrok http 80
+ fi
