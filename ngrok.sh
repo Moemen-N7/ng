@@ -51,24 +51,6 @@ chmod 700 /data/data/com.termux/files/usr/bin/ngrok
 rm ngrok.zip
 
 
-
-
-echo -e $red "███╗   ██╗ ██████╗ ██████╗  ██████╗ ██╗  ██╗";
-echo -e $grn "████╗  ██║██╔════╝ ██╔══██╗██╔═══██╗██║ ██╔╝";
-echo -e $red "██╔██╗ ██║██║  ███╗██████╔╝██║   ██║█████╔╝ ";
-echo -e $grn "██║╚██╗██║██║   ██║██╔══██╗██║   ██║██╔═██╗ ";
-echo -e $red "██║ ╚████║╚██████╔╝██║  ██║╚██████╔╝██║  ██╗";
-echo -e $grn "╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝";
-
-
-
-read -p "but your token" token
-
-
-/data/data/com.termux/files/usr/bin/ngrok authtoken $token
-
-/data/data/com.termux/files/usr/bin/ngrok http 80
-
 n)
     echo -e "${r}[-] Ngrok not installed"
     echo
