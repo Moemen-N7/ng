@@ -20,47 +20,18 @@ clear
 echo -e $red "█▀▄ █▀█ █░█░█ █▄░█ █░░ █▀█ ▄▀█ █▀▄   █▄░█ █▀▀ █▀█ █▀█ █▄▀"; sleep 0.2
 echo -e $grn "█▄▀ █▄█ ▀▄▀▄▀ █░▀█ █▄▄ █▄█ █▀█ █▄▀   █░▀█ █▄█ █▀▄ █▄█ █░█"; sleep 0.2    
 echo 
-echo -e $grn"Do you want to install Ngrok? [Y/n]"
-read selection
-case $selection in
-y)
-    clear
-    echo
-    sleep 0.4
-    printf "Please wait..[                    ] 0% "
-    sleep 0.4
-    clear
-    printf "Please wait..[=====               ] 25%"
-    sleep 0.4
-    clear
-    printf "Please wait..[==========          ] 50%"
-    sleep 0.4
-    clear
-    printf "Please wait..[===============     ] 75%"
-    sleep 0.4
-    clear
- printf "Please wait..[====================] 100%"
-sleep 0.4
 
-clear
+echo -e $grn"================================================"; sleep 0.2
+read -p "enter your token :- " token
+echo -e $grn"================================================"; sleep 0.2
+
+
+
 apt install wget
 wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip
 unzip ngrok-stable-linux-arm.zip
 cat ngrok > /data/data/com.termux/files/usr/bin/ngrok
 chmod 700 /data/data/com.termux/files/usr/bin/ngrok
 rm ngrok.zip
-
-
-n)
-    echo -e "${r}[-] Ngrok not installed"
-    echo
-    ;;
-    
-exit)
-    echo -e $y"Goodbye "
-    ;;
-    
-*)
-    echo -e $y"unknown"
-    ;;
-esac
+ngrok authtoken $token
+ngrok http 80
