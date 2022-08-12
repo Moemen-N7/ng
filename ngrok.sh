@@ -30,7 +30,7 @@ echo -e $grn"================================================"; sleep 0.2
 apt install wget
 wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip
 unzip ngrok-stable-linux-arm.zip
-mv ngrok > /data/data/com.termux/files/usr/bin/ngrok
+mv ngrok /data/data/com.termux/files/usr/bin/ngrok
 chmod 700 /data/data/com.termux/files/usr/bin/ngrok
 rm ngrok-stable-linux-arm.zip
 /data/data/com.termux/files/usr/bin/ngrok authtoken $token
