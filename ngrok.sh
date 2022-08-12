@@ -20,11 +20,32 @@ clear
 echo -e $red "█▀▄ █▀█ █░█░█ █▄░█ █░░ █▀█ ▄▀█ █▀▄   █▄░█ █▀▀ █▀█ █▀█ █▄▀"; sleep 0.2
 echo -e $grn "█▄▀ █▄█ ▀▄▀▄▀ █░▀█ █▄▄ █▄█ █▀█ █▄▀   █░▀█ █▄█ █▀▄ █▄█ █░█"; sleep 0.2    
 echo 
-read -p "Download ngrok {y/n}" choose
+echo -e $grn"Do you want to install Ngrok? [Y/n]"
+read selection
+case $selection in
+y)
+    clear
+    echo
+    sleep 0.4
+    printf "Please wait..[                    ] 0% "
+    sleep 0.4
+    clear
+    printf "Please wait..[=====               ] 25%"
+    sleep 0.4
+    clear
+    printf "Please wait..[==========          ] 50%"
+    sleep 0.4
+    clear
+    printf "Please wait..[===============     ] 75%"
+    sleep 0.4
+    clear
+ printf "Please wait..[====================] 100%"
+sleep 0.4
+ clear
 
 
 if [ $choose -eq y ]
-then 
+then
 clear
 apt install wget
 wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip
@@ -35,7 +56,7 @@ rm ngrok.zip
 fi
 
 if [ $choose -eq n ]
-then 
+then
 echo "OK"
 
 fi
@@ -56,4 +77,5 @@ read -p "but your token" token
 /data/data/com.termux/files/usr/bin/ngrok authtoken $token
 
 /data/data/com.termux/files/usr/bin/ngrok http 80
- fi
+
+fi
