@@ -34,10 +34,10 @@ echo -e $grn"================================================"; sleep 0.2
 
 
 apt install wget
-wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip
-unzip ngrok-stable-linux-arm.zip
+wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz
+tar -xvzf  ngrok-v3-stable-linux-amd64.tgz
 mv ngrok /usr/bin/ngrok
-chmod 700 /usr/bin/ngrok
+chmod +x /usr/bin/ngrok
 rm ngrok-stable-linux-arm.zip
-/usr/bin/ngrok authtoken $token
+ngrok authtoken $token
 ngrok http 80
