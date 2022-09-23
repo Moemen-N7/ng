@@ -34,6 +34,7 @@ echo -e $grn"================================================"; sleep 0.2
 
 
 apt install wget
+apt install tar
 wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz
 tar -xvzf  ngrok-v3-stable-linux-amd64.tgz
 mv ngrok /usr/bin/ngrok
