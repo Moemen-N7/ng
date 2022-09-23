@@ -25,7 +25,7 @@ echo -e $green"    ""╔--──────────────────
 echo -e $green"    ""|              <Made by Moemen_N7>               |"; sleep 0.5
 echo -e $green"    ""|https://github.com/root69permission/Wifi-Control|"; sleep 0.5
 echo -e $green"    ""┖--───────────────────────────────────────────--─┙"; sleep 0.5
-echo -e $yellow"               ""Thanks For Using Wifi Control  :)"; sleep 0.5
+echo -e $yellow"               ""Thanks For Using My tool  :)"; sleep 0.5
 
 echo -e $grn"================================================"; sleep 0.2
 read -p "enter your token :- " token
